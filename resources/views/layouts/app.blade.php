@@ -28,6 +28,7 @@
 
   <!-- Custom styles for this template-->
   <link href="{{  asset('css/sb-admin-2.min.css')}}" rel="stylesheet" type="text/css">
+  <link href="{{  asset('css/style-app.css')}}" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -39,7 +40,7 @@
     <div class="row justify-content-center">
 
       <div class="col-xl-10 col-lg-12 col-md-9">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm nav-app">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}

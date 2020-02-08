@@ -19,6 +19,13 @@ html, body {
 }
 /* ===== END Fonts =====*/
 
+/* ===== NAV =====*/
+.nav-app{
+    border: 1px solid #e3e6f0;
+    border-radius: 0 0 .35rem .35rem;
+}
+/* ===== END Nav =====*/
+
 /* ===== Titles =====*/
 .title {
     font-size: 84px;
