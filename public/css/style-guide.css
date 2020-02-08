@@ -1,0 +1,53 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+/* ===== Fonts =====*/
+.text-console{
+  background-color: #490a4e;
+  border-radius: 3px;
+  color: #f143ff;
+  display: inline-block;
+  font-family: 'Roboto Mono', monospace;
+  margin: 0.2vh;
+  padding: 0.7vh;
+}
+/* ===== END Fonts =====*/
+
+/* ===== Titles =====*/
+.title {
+    font-size: 84px;
+    margin-bottom: 30px;
+}
+/* ===== END Titles =====*/
+
+.full-height {
+    height: 100vh;
+}
+/* ===== Content =====*/
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+/* ===== END Content =====*/
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content-primary {
+
+}
