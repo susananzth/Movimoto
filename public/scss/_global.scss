@@ -1,28 +1,60 @@
+// Global component styles
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
-  @include body-font;
+  height: 100%;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  @include heading-font;
+a {
+  &:focus {
+    outline: none;
+  }
 }
 
-.btn-xl {
-  text-transform: uppercase;
-  padding: 1.5rem 3rem;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.1rem;
+// Main page wrapper
+#wrapper {
+  display: flex;
+  #content-wrapper {
+    background-color: $gray-100;
+    width: 100%;
+    overflow-x: hidden;
+    #content {
+      flex: 1 0 auto;
+    }
+  }
 }
 
-.bg-black {
-  background-color: $black !important;
+// Set container padding to match gutter width instead of default 15px
+.container,
+.container-fluid {
+  padding-left: $grid-gutter-width;
+  padding-right: $grid-gutter-width;
 }
 
-.rounded-pill {
-  border-radius: 5rem;
+// Scroll to top button
+.scroll-to-top {
+  position: fixed;
+  right: 1rem;
+  bottom: 1rem;
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  text-align: center;
+  color: $white;
+  background: fade-out($gray-800, .5);
+  line-height: 46px;
+  &:focus,
+  &:hover {
+    color: white;
+  }
+  &:hover {
+    background: $gray-800;
+  }
+  i {
+    font-weight: 800;
+  }
 }
