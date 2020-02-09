@@ -31,7 +31,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Start Bootstrap</a>
+      <a class="navbar-brand" href="{{ url('/') }}"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -56,19 +56,17 @@
     </div>
   </nav>
 
-  <header class="masthead text-center text-white">
-    <div class="masthead-content">
-      <div class="container">
-        <h1 class="masthead-heading mb-0">One Page Wonder</h1>
-        <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
-        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
-      </div>
-    </div>
-    <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div>
-  </header>
+  <div>
+      <header class="masthead text-center text-white">
+        <div class="masthead-content">
+          <div class="container">
+            <h1 class="masthead-heading mb-0">One Page Wonder</h1>
+            <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
+            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+          </div>
+        </div>
+      </header>
+  </div>
 
   <section>
     <div class="container">
@@ -127,7 +125,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-black">
     <div class="container">
-      <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2020</p>
+      <p class="m-0 text-center text-white small">Copyright &copy; Movimoto 2020</p>
     </div>
     <!-- /.container -->
   </footer>

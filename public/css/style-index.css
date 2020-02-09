@@ -6,3 +6,23 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Roboto', monospace;
 }
 /* ===== END Fonts =====*/
+
+/* ===== Header =====*/
+header.masthead {
+background: url("/img/bg-02.jpg");
+}
+.masthead-content{
+    background: #ffffff7d;
+    border-radius: 5px;
+    padding: 1rem;
+    color: #267b38;
+    display: inline-block;
+}
+/* ===== END Header =====*/
+.navbar-brand{
+  background-image: url(/img/logo.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 2.5rem;
+  width: 8rem;
+}
