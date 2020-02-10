@@ -14,11 +14,21 @@ background: url("/img/bg-02.jpg");
 .masthead-content{
     background: #ffffff7d;
     border-radius: 5px;
-    padding: 1rem;
-    color: #267b38;
+    color: #37632c;
     display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+}
+.bg-gradient-primary {
+    background-color: #43bb6b;
+    background-image: linear-gradient(180deg,#278847 10%,#43bb6b 100%);
 }
 /* ===== END Header =====*/
+
+/* ===== Nav =====*/
+.navbar-custom {
+    background-color: rgba(195, 208, 196, 0.73);
+}
 .navbar-brand{
   background-image: url(/img/logo.png);
   background-size: contain;
@@ -26,3 +36,24 @@ background: url("/img/bg-02.jpg");
   height: 2.5rem;
   width: 8rem;
 }
+.navbar-dark .navbar-toggler {
+    border-color: transparent;;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: #1e7e34;
+}
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: rgba(29, 135, 39, 0.62);
+}
+/* ===== END Nav =====*/
+
+/* ====== btn ====== */
+.btn-primary {
+    background-color: #1d8727;
+    border-color: #1d8727;
+}
+.btn-primary:active, .btn-primary:focus, .btn-primary:hover {
+    background-color: #1d8727!important;
+    border-color: #1d8727!important;
+}
+/* ====== END btn ====== */

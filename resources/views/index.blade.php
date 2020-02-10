@@ -39,14 +39,14 @@
         @if (Route::has('login'))
           <ul class="navbar-nav ml-auto">
             @auth
-                <a href="{{ url('/home') }}">Home</a>
+                <a href="{{ url('/home') }}">Inicio</a>
             @else
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">Log In</a>
+                  <a class="nav-link" href="{{ route('login') }}">Iniciar sesión</a>
                 </li>
                 @if (Route::has('register'))
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">Sign Up</a>
+                  <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
                 </li>
                 @endif
             @endauth
@@ -60,9 +60,9 @@
       <header class="masthead text-center text-white">
         <div class="masthead-content">
           <div class="container">
-            <h1 class="masthead-heading mb-0">One Page Wonder</h1>
-            <h2 class="masthead-subheading mb-0">Will Rock Your Socks Off</h2>
-            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>
+            <h1 class="masthead-heading mb-0">Movimoto</h1>
+            <h2 class="masthead-subheading mb-0">Orden y Seguridad</h2>
+            <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Leer más</a>
           </div>
         </div>
       </header>
