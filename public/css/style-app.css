@@ -37,6 +37,10 @@ html, body {
     height: 100vh;
 }
 /* ===== Content =====*/
+.bg-gradient-primary {
+    background-color: #0f6848;
+    background-image: linear-gradient(180deg,#28a961 10%,#0f6848 100%);
+}
 .flex-center {
     align-items: center;
     display: flex;
