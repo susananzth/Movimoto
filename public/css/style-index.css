@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== Header =====*/
 header.masthead {
 background: url("/img/bg-02.jpg");
+background-size: cover;
 }
 .masthead-content{
     background: #ffffff7d;
