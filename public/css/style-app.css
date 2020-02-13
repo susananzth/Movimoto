@@ -6,7 +6,12 @@ html, body {
     height: 100vh;
     margin: 0;
 }
-
+a {
+    color: #44864d;
+}
+a:hover {
+    color: #509e5b;
+}
 /* ===== Fonts =====*/
 .text-console{
   background-color: #490a4e;
@@ -30,6 +35,18 @@ html, body {
   background-repeat: repeat-x;
   height: 2.5rem;
   width: 8rem;
+}
+.btn-primary {
+    background-color: #44864d;
+    border-color: #44864d;
+}
+.btn-primary:hover {
+    background-color: #509e5b;
+    border-color: #509e5b;
+}
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    background-color: #509e5b;
+    border-color: #509e5b;
 }
 /* ===== END Nav =====*/
 
