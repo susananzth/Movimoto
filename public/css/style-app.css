@@ -24,6 +24,13 @@ html, body {
     border: 1px solid #e3e6f0;
     border-radius: 0 0 .35rem .35rem;
 }
+.navbar-brand{
+  background-image: url(/img/logo.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 2.5rem;
+  width: 8rem;
+}
 /* ===== END Nav =====*/
 
 /* ===== Titles =====*/

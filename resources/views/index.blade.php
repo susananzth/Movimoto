@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
+<html lang="es">
+<!-- {{ str_replace('_', '-', app()->getLocale()) }} -->
 <head>
 
   <meta charset="utf-8">
@@ -39,14 +39,22 @@
         @if (Route::has('login'))
           <ul class="navbar-nav ml-auto">
             @auth
-                <a href="{{ url('/home') }}">Inicio</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ url('/home') }}">{{ __('Panel administrativo') }}</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ __('Cerrar sesión') }}</a>
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
+                </li>
             @else
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('login') }}">Iniciar sesión</a>
+                  <a class="nav-link" href="{{ route('login') }}">{{ __('Iniciar sesión') }}</a>
                 </li>
                 @if (Route::has('register'))
                 <li class="nav-item">
-                  <a class="nav-link" href="{{ route('register') }}">Registrarse</a>
+                  <a class="nav-link" href="{{ route('register') }}">{{ __('Registrarse') }}</a>
                 </li>
                 @endif
             @endauth

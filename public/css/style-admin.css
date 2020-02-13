@@ -1,0 +1,8 @@
+.sidebar-dark .sidebar-brand {
+  background-image: url(/img/logo.png);
+  background-size: contain;
+  background-repeat: repeat-x;
+  height: 2.5rem;
+  margin: 1rem 0 0 1rem;
+  width: 8rem;
+}
