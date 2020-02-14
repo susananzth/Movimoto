@@ -14,6 +14,9 @@
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/project', function () {
+    return view('project.project');
+});
 
 
 Auth::routes();
