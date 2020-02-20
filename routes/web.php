@@ -46,3 +46,14 @@ Route::get('correo/verificar/{id}/{hash}', 'Auth\VerificationController@verify')
 Route::post('correo/reenviar', 'Auth\VerificationController@resend')->name('verification.resend');
 
 Route::get('/oficina', 'HomeController@index')->name('home');
+
+use App\Mail\MailtrapExample;
+use Illuminate\Support\Facades\Mail;
+
+Route::get('/send-mail', function () {
+
+    Mail::to('newuser@example.com')->send(new MailtrapExample());
+
+    return 'A message has been sent to Mailtrap!';
+
+});
