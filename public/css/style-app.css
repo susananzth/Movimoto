@@ -12,17 +12,6 @@ a {
 a:hover {
     color: #509e5b;
 }
-/* ===== Fonts =====*/
-.text-console{
-  background-color: #490a4e;
-  border-radius: 3px;
-  color: #f143ff;
-  display: inline-block;
-  font-family: 'Roboto Mono', monospace;
-  margin: 0.2vh;
-  padding: 0.7vh;
-}
-/* ===== END Fonts =====*/
 
 /* ===== NAV =====*/
 .nav-app{
@@ -78,6 +67,12 @@ a:hover {
 .store-title{
     color: #fdfdfd;
     text-shadow: #aaaaaaeb 3px 3px 10px;
+}
+.navigation{
+    margin: 0 auto;
+}
+.page-link, .page-link:hover {
+  color: #636b6f;
 }
 /*   PRODUCTOS TIENDA  */
 .card { /* Diseño de las tarjetas*/
