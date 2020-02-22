@@ -103,12 +103,14 @@ a:hover {
     transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
 }
+.lift:hover {
+    transform: translateY(-0.3333333333rem);
+    box-shadow: 0 0.5rem 2rem 0 rgba(31, 45, 65, 0.25);
+}
 .h-100 {
     height: 100% !important;
 }
-
 .post-preview-meta-details {
-  border-bottom: 1px solid #e5e5e5;
   padding-bottom: 10px;
 }
 .post-preview-meta-details ul {

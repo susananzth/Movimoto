@@ -4,140 +4,135 @@
     <div class="container">
         <h1 class="store-title">Tienda</h1>
         <div class="row">
-            <div class="col-md-6 col-xl-4 mb-5">
-                <div class="card post-preview lift h-100">
-                    <img class="card-img-top" src="https://source.unsplash.com/KE0nC8-58MQ/660x360" alt="pic" />
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card lift h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <div class="card-title">Título del producto</div>
+                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
                         <div class="card-text">
-                            <div class="info">Descripción del producto</div>
-                            <div class="style">Color: Rojo / Stilo: M9621C</div>
-                            <div class="price">$50.00 <span class="old-price">$75.00</span></div>
+                            <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
+                            <p class="">Descripción del producto</p>
+                            <div class="">
+                                &#9733; &#9733; &#9733; &#9733; &#9734;
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <div class="post-preview-meta">
-                            <div class="post-preview-meta-details">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                              </ul>
-                            </div>
+                        <div class="post-preview-meta-details">
+                            <ul>
+                                <li><a href="#">Agregar al carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4 mb-5">
-                <div class="card post-preview lift h-100">
-                    <img class="card-img-top" src="https://source.unsplash.com/KE0nC8-58MQ/660x360" alt="pic" />
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card lift h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <div class="card-title">Título del producto</div>
+                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
                         <div class="card-text">
-                            <div class="info">Descripción del producto</div>
-                            <div class="style">Color: Rojo / Stilo: M9621C</div>
-                            <div class="price">$50.00 <span class="old-price">$75.00</span></div>
+                            <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
+                            <p class="">Descripción del producto</p>
+                            <div class="">
+                                &#9733; &#9733; &#9733; &#9733; &#9734;
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <div class="post-preview-meta">
-                            <div class="post-preview-meta-details">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                              </ul>
-                            </div>
+                        <div class="post-preview-meta-details">
+                            <ul>
+                                <li><a href="#">Agregar al carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4 mb-5">
-                <div class="card post-preview lift h-100">
-                    <img class="card-img-top" src="https://source.unsplash.com/KE0nC8-58MQ/660x360" alt="pic" />
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card lift h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <div class="card-title">Título del producto</div>
+                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
                         <div class="card-text">
-                            <div class="info">Descripción del producto</div>
-                            <div class="style">Color: Rojo / Stilo: M9621C</div>
-                            <div class="price">$50.00 <span class="old-price">$75.00</span></div>
+                            <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
+                            <p class="">Descripción del producto</p>
+                            <div class="">
+                                &#9733; &#9733; &#9733; &#9733; &#9734;
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <div class="post-preview-meta">
-                            <div class="post-preview-meta-details">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                              </ul>
-                            </div>
+                        <div class="post-preview-meta-details">
+                            <ul>
+                                <li><a href="#">Agregar al carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4 mb-5">
-                <div class="card post-preview lift h-100">
-                    <img class="card-img-top" src="https://source.unsplash.com/KE0nC8-58MQ/660x360" alt="pic" />
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card lift h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <div class="card-title">Título del producto</div>
+                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
                         <div class="card-text">
-                            <div class="info">Descripción del producto</div>
-                            <div class="style">Color: Rojo / Stilo: M9621C</div>
-                            <div class="price">$50.00 <span class="old-price">$75.00</span></div>
+                            <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
+                            <p class="">Descripción del producto</p>
+                            <div class="">
+                                &#9733; &#9733; &#9733; &#9733; &#9734;
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <div class="post-preview-meta">
-                            <div class="post-preview-meta-details">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                              </ul>
-                            </div>
+                        <div class="post-preview-meta-details">
+                            <ul>
+                                <li><a href="#">Agregar al carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4 mb-5">
-                <div class="card post-preview lift h-100">
-                    <img class="card-img-top" src="https://source.unsplash.com/KE0nC8-58MQ/660x360" alt="pic" />
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card lift h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <div class="card-title">Título del producto</div>
+                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
                         <div class="card-text">
-                            <div class="info">Descripción del producto</div>
-                            <div class="style">Color: Rojo / Stilo: M9621C</div>
-                            <div class="price">$50.00 <span class="old-price">$75.00</span></div>
+                            <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
+                            <p class="">Descripción del producto</p>
+                            <div class="">
+                                &#9733; &#9733; &#9733; &#9733; &#9734;
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <div class="post-preview-meta">
-                            <div class="post-preview-meta-details">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                              </ul>
-                            </div>
+                        <div class="post-preview-meta-details">
+                            <ul>
+                                <li><a href="#">Agregar al carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="col-md-6 col-xl-4 mb-5">
-                <div class="card post-preview lift h-100">
-                    <img class="card-img-top" src="https://source.unsplash.com/KE0nC8-58MQ/660x360" alt="pic" />
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card lift h-100">
+                    <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <div class="card-title">Título del producto</div>
+                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
                         <div class="card-text">
-                            <div class="info">Descripción del producto</div>
-                            <div class="style">Color: Rojo / Stilo: M9621C</div>
-                            <div class="price">$50.00 <span class="old-price">$75.00</span></div>
+                            <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
+                            <p class="">Descripción del producto</p>
+                            <div class="">
+                                &#9733; &#9733; &#9733; &#9733; &#9734;
+                            </div>
                         </div>
                     </div>
                     <div class="card-footer">
-                        <div class="post-preview-meta">
-                            <div class="post-preview-meta-details">
-                              <ul>
-                                <li><a href="#"><i class="fa fa-star-o" aria-hidden="true"></i></a></li>
-                                <li><a href="#"><i class="fa fa-shopping-basket" aria-hidden="true"></i></a></li>
-                              </ul>
-                            </div>
+                        <div class="post-preview-meta-details">
+                            <ul>
+                                <li><a href="#">Agregar al carrito <i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
