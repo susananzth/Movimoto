@@ -131,6 +131,10 @@ a:hover {
 .card-title {
     font-size: 1rem;
 }
+.item_title{
+  display: flex;
+  justify-content: space-between;
+}
 .card-text{
   font-size: 0.85rem;
   text-align: center;

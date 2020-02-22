@@ -49,3 +49,4 @@ Route::get('/send-mail', function () {
 
 //Rutas de la tienda...
 Route::get('/tienda', function () {return view('store.store');});
+Route::get('/articulo/{id}', function ($id) {return view('store.item');});
