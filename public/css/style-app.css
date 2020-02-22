@@ -74,6 +74,96 @@ a:hover {
 .position-ref {
     position: relative;
 }
+/*  TIENDA  */
+.store-title{
+    color: #fdfdfd;
+    text-shadow: #aaaaaaeb 3px 3px 10px;
+}
+/*   PRODUCTOS TIENDA  */
+.card { /* Diseño de las tarjetas*/
+    background-clip: border-box;
+    background-color: #fff;
+    border: 0 solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.35rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 45, 65, 0.15);
+    display: -webkit-box;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    position: relative;
+    word-wrap: break-word;
+}
+.lift {
+    box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 45, 65, 0.15);
+    -webkit-transition: box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+    transition: box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out;
+}
+.h-100 {
+    height: 100% !important;
+}
+
+.post-preview-meta-details {
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom: 10px;
+}
+.post-preview-meta-details ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+}
+.post-preview-meta-details a {
+  color: #9e9e9e;
+}
+.post-preview-meta-details a:hover {
+  color: #c7ccdb;
+}
+.card-title {
+    font-size: 1rem;
+}
+.card-text{
+  font-size: 0.85rem;
+  text-align: center;
+}
+.post-preview .post-preview-meta {
+    display: flex;
+    align-items: center;
+    margin-right: 0.5rem;
+}
+.post-preview .post-preview-meta .post-preview-meta-img {
+    height: 2.25rem;
+    width: 2.25rem;
+    border-radius: 100%;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+}
+.info {
+  font-size: 14px;
+  color: #969696;
+  margin-bottom: 10px;
+}
+.style {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+.old-price {
+  color: #f00;
+  text-decoration: line-through;
+}
+/*  END PRODUCTOS TIENDA  */
 
 /* ===== END Content =====*/
 
