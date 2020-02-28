@@ -62,7 +62,9 @@ Por lo que necesitan un sistema que pueda registrar cada uno de las empresas y m
 
 
               </p>
-
+              <p class="paragraph">
+                  Laravel tiene su propias reglas para el nombramiento de las clases, funciones, tablas, campos de la base de datos, modelo, controladores, etc. Por lo que se acondeja respetar esos lineamientos para el correcto funcionamiento del framework.
+              </p>
             </div>
     </body>
 </html>
