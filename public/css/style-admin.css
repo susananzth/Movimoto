@@ -16,6 +16,9 @@
 .sidebar-dark .sidebar-heading {
     color: #44864d;
 }
+.store{
+  font-size: 20px !important;
+}
 .sidebar-dark .nav-item .nav-link {
     color: #44864d;
 }
