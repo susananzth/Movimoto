@@ -54,6 +54,10 @@
     padding-bottom: .75rem;
     color: #fff;
 }
+
+.mr-auto, .mx-auto {
+    margin-top: 1rem !important;
+  }
 /* ======= END Nav ======= */
 
 /* ======= Sidebar ======= */
