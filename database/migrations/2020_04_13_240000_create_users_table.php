@@ -15,6 +15,8 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->bigInteger('type_user_id')->unsigned()->index()->nullable();
+            $table->foreign('type_user_id')->references('id')->on('type_users')->onDelete('cascade');
             $table->integer('dni')->unique();
             $table->string('name')->unique();
             $table->string('firstname');
@@ -27,7 +29,11 @@ class CreateUsersTable extends Migration
             $table->integer('distrit');
             $table->string('address');
             $table->rememberToken();
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
+            $table->integer('modified_by')->nullable()->default('1');
+            $table->boolean('status'  )->nullable()->default(true);
         });
     }
 

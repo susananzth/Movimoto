@@ -8,7 +8,7 @@
       <div class="row">
         <!-- Caja donde va la imágen de la izquierda -->
         <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
-        <!-- Caja donde va el formulario de la derecha -->
+        <!-- Caja donde va el formulario de registro de cliente -->
         <div class="col-lg-7">
           <div class="p-5">
             <div class="text-center">
@@ -17,6 +17,14 @@
             <!-- Formulario -->
             <form class="user" method="POST" action="{{ route('register') }}">
               @csrf
+              <div class="form-group">
+                  <input type="text" class="form-control form-control-user @error('type_user_id') is-invalid @enderror" name="type_user_id" id="type_user_id" placeholder="Tipo de usuario" value="{{ old('type_user_id') }}" required autocomplete="type_user_id">
+                  @error('type_user_id')
+                      <span class="invalid-feedback" role="alert">
+                          <strong>{{ $message }}</strong>
+                      </span>
+                  @enderror
+              </div>
               <div class="form-group row">
                 <div class="col-sm-6 mb-3 mb-sm-0">
                   <input type="text" class="form-control form-control-user @error('dni') is-invalid @enderror" name="dni" id="dni" placeholder="DNI" value="{{ old('dni') }}" required autocomplete="dni" autofocus>

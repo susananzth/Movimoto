@@ -74,6 +74,11 @@ a:hover {
 .page-link, .page-link:hover {
   color: #636b6f;
 }
+.bg-login-image {
+    background: url(https://source.unsplash.com/K4mSJ7kc0As/600x800);
+    background-position: center;
+    background-size: cover;
+}
 /*   PRODUCTOS TIENDA  */
 .card { /* Diseño de las tarjetas*/
     background-clip: border-box;
