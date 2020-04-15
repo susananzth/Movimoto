@@ -51,6 +51,10 @@ Route::get('/send-mail', function () {
 Route::get('/tienda', function () {return view('store.store');});
 Route::get('/articulo', function () {return view('store.item');});
 
+//Rutas de productos...
+Route::get('/nuevo-articulo', function () {return view('products.new');});
+Route::get('/articulo', function () {return view('store.item');});
+
 Route::get('profile', function () {
     // Only verified users may enter...
 })->middleware('verified');

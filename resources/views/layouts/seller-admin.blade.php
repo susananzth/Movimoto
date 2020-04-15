@@ -21,6 +21,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
   <!-- Estilos -->
+  @yield('css')
+  @yield('js')
+
+  
   <link href="{{  asset('css/sb-admin-2.min.css')}}" rel="stylesheet" type="text/css">
   <link href="{{  asset('css/style-admin.css')}}" rel="stylesheet" type="text/css">
 
