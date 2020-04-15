@@ -57,7 +57,20 @@
 
 .mr-auto, .mx-auto {
     margin-top: 1rem !important;
-  }
+}
+.btn-link {
+    color: #44864d;
+}
+.btn-link:hover {
+    color: #509e5b;
+}
+
+@media (min-width: 576px){
+
+    .form-inline .custom-select, .form-inline .input-group {
+        padding-right: 1rem;
+    }
+}
 /* ======= END Nav ======= */
 
 /* ======= Sidebar ======= */
@@ -66,3 +79,21 @@
     background-image: linear-gradient(180deg,#edeef0 10%,#f8f9fc 100%);
 }
 /* ======= END Sidebar ======= */
+
+
+a {
+    color: #44864d;
+}
+a:hover {
+    color: #509e5b;
+}
+
+.post-preview-meta-details ul li{
+    list-style-type: none;
+}
+.page-link {
+    color: #44864d;
+}
+.page-link:hover {
+    color: #509e5b;
+}

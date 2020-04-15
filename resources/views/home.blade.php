@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">Panel administrativo</div>
+                <div class="card-header">Bienvenido(a)!!</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Bienvenido(a)!!
+                    Usted ha ingresado a la comunicad de Movimoto!!
                 </div>
             </div>
         </div>
