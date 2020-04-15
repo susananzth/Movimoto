@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Quicksand', sans-serif;
+}
+*{
+  font-family: 'Quicksand', sans-serif;
+}
 /* ======= Nav ======= */
 .sidebar-dark .sidebar-brand {
     background-image: url(/img/logo.png);
@@ -54,6 +60,9 @@
     padding-bottom: .75rem;
     color: #fff;
 }
+.sidebar .nav-item .collapse .collapse-inner .collapse-item, .sidebar .nav-item .collapsing .collapse-inner .collapse-item {
+    white-space: inherit;
+}
 
 .mr-auto, .mx-auto {
     margin-top: 1rem !important;
@@ -64,7 +73,12 @@
 .btn-link:hover {
     color: #509e5b;
 }
-
+@media (min-width: 768px){
+    .sidebar .nav-item .nav-link span {
+        font-size: 1rem;
+        display: inline;
+    }
+}
 @media (min-width: 576px){
 
     .form-inline .custom-select, .form-inline .input-group {
@@ -80,7 +94,7 @@
 }
 /* ======= END Sidebar ======= */
 
-
+/* ======= Content ======= */
 a {
     color: #44864d;
 }
@@ -97,3 +111,12 @@ a:hover {
 .page-link:hover {
     color: #509e5b;
 }
+/* ======= END Content ======= */
+
+/* ======= Footer ======= */
+
+footer.sticky-footer .copyright {
+    font-size: 1rem;
+}
+
+/* ======= END Footer ======= */
