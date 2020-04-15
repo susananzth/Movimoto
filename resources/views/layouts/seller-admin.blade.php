@@ -76,8 +76,8 @@
       <!-- Menú del carrito -->
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/oficina') }}">
-          <i class="fas fa-fw fa-cart-arrow-down"></i>
-          <span>Carrito</span></a>
+          <i class="fas fa-fw fa-cash-register"></i>
+          <span>Productos</span></a>
       </li>
 
       <!-- Menú de la red -->
@@ -358,6 +358,7 @@
   <!-- Page level custom scripts -->
   <script src="{{ asset('js/demo/chart-area-demo.js') }}" defer></script>
   <script src="{{ asset('js/demo/chart-pie-demo.js') }}" defer></script>
+  <script src="https://kit.fontawesome.com/9be830755c.js" crossorigin="anonymous"></script>
 
 </body>
 
