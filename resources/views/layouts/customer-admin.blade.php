@@ -119,6 +119,12 @@
           <span>Cerrar sesión</span></a>
       </li>
 
+      <!-- Espacio entre menú -->
+      <hr class="sidebar-divider">
+      <div class="text-center d-none d-md-inline">
+        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+      </div>
+
       <!-- Ventana modal de cerrar sesión -->
       <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
