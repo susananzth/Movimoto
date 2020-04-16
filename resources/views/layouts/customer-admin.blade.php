@@ -12,8 +12,8 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>{{ config('app.name', 'Movimoto') }}</title>
-  <!-- Scripts -->
-  <script src="{{ asset('js/app.js') }}" defer></script>
+  <!-- Scripts
+  <script src="{{ asset('js/app.js') }}" defer></script> -->
 
   <!-- Fuentes -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -355,9 +355,9 @@
   <!-- Page level plugins -->
   <script src="{{ asset('vendor/chart.js/Chart.min.js') }}" defer></script>
 
-  <!-- Page level custom scripts -->
+  <!-- Page level custom scripts
   <script src="{{ asset('js/demo/chart-area-demo.js') }}" defer></script>
-  <script src="{{ asset('js/demo/chart-pie-demo.js') }}" defer></script>
+  <script src="{{ asset('js/demo/chart-pie-demo.js') }}" defer></script> -->
 
 </body>
 

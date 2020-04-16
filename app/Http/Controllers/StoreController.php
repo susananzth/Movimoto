@@ -37,6 +37,6 @@ class StoreController extends Controller
   // Mostrar crear un artículo
   public function newItem()
   {
-      return view('store.new');
+      return view('products.new');
   }
 }
