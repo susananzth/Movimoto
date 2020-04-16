@@ -4,6 +4,23 @@
 *{
   font-family: 'Quicksand', sans-serif;
 }
+.text-primary {
+    color: #44864d!important;
+}
+
+/* FORM  */
+.form-control:focus {
+    border-color: #a7efb0;
+    box-shadow: 0 0 0 0.2rem rgba(177, 214, 182, 0.53);
+}
+.item-group {
+    border: 1px solid #d1d3e2;
+    border-radius: .35rem;
+    height: 100%;
+    padding: .5rem;
+}
+/* END FORM */
+
 /* ======= Nav ======= */
 .sidebar-dark .sidebar-brand {
     background-image: url(/img/logo.png);
@@ -148,8 +165,7 @@ footer.sticky-footer .copyright {
 
 
 #mceu_13{
-    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
-    border: 1px solid #e3e6f0;
+    border: 1px solid #d1d3e2;
     border-radius: .35rem;
     position: relative;
     display: flex;
