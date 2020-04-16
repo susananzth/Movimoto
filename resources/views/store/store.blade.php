@@ -1,4 +1,4 @@
-@extends('layouts.customer-admin')
+@extends('layouts.seller-admin')
 
 @section('content')
     <div class="container">
@@ -9,7 +9,7 @@
                 <div class="card lift h-100">
                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
+                        <h4 class="card-title"><a href="{{ url('/articulo') }}">Título del producto</a></h4>
                         <div class="card-text">
                             <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
                             <p class="">Descripción del producto</p>
@@ -31,7 +31,7 @@
                 <div class="card lift h-100">
                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
+                        <h4 class="card-title"><a href="{{ url('/articulo') }}">Título del producto</a></h4>
                         <div class="card-text">
                             <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
                             <p class="">Descripción del producto</p>
@@ -53,7 +53,7 @@
                 <div class="card lift h-100">
                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
+                        <h4 class="card-title"><a href="{{ url('/articulo') }}">Título del producto</a></h4>
                         <div class="card-text">
                             <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
                             <p class="">Descripción del producto</p>
@@ -75,7 +75,7 @@
                 <div class="card lift h-100">
                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
+                        <h4 class="card-title"><a href="{{ url('/articulo') }}">Título del producto</a></h4>
                         <div class="card-text">
                             <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
                             <p class="">Descripción del producto</p>
@@ -97,7 +97,7 @@
                 <div class="card lift h-100">
                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
+                        <h4 class="card-title"><a href="{{ url('/articulo') }}">Título del producto</a></h4>
                         <div class="card-text">
                             <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
                             <p class="">Descripción del producto</p>
@@ -119,7 +119,7 @@
                 <div class="card lift h-100">
                     <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
                     <div class="card-body">
-                        <h4 class="card-title"><a href="#">Título del producto</a></h4>
+                        <h4 class="card-title"><a href="{{ url('/articulo') }}">Título del producto</a></h4>
                         <div class="card-text">
                             <h5 class="price">$24.99 <span class="old-price">$75.00</span></h5>
                             <p class="">Descripción del producto</p>

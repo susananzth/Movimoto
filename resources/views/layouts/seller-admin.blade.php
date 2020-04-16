@@ -79,7 +79,7 @@
 
       <!-- Menú del carrito -->
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/oficina') }}">
+        <a class="nav-link" href="{{ url('/nuevo-articulo') }}">
           <i class="fas fa-fw fa-cash-register"></i>
           <span>Productos</span></a>
       </li>
