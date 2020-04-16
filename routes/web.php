@@ -48,12 +48,11 @@ Route::get('/send-mail', function () {
 });
 
 //Rutas de la tienda...
-Route::get('/tienda', function () {return view('store.store');});
-Route::get('/articulo', function () {return view('store.item');});
+Route::get('/tienda', 'StoreController@showStore');
 
 //Rutas de productos...
-Route::get('/nuevo-articulo', function () {return view('products.new');});
-Route::get('/articulo', function () {return view('store.item');});
+Route::get('/nuevo-articulo', 'StoreController@newItem');
+Route::get('/articulo', 'StoreController@showItem');
 
 Route::get('profile', function () {
     // Only verified users may enter...
