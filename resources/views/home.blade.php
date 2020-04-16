@@ -1,4 +1,4 @@
-@extends('layouts.customer-admin')
+@extends('layouts.seller-admin')
 
 @section('content')
 <div class="container">

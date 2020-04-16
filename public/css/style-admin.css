@@ -19,6 +19,9 @@
     height: 100%;
     padding: .5rem;
 }
+.btn-primary.focus, .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(177, 214, 182, 0.53);
+}
 /* END FORM */
 
 /* ======= Nav ======= */

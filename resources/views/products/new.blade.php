@@ -119,21 +119,21 @@
                 <div class="ml-auto text-right">
                     <a href="#" class="btn btn-danger btn-icon-split">
                         <span class="icon text-white-50">
-                          <i class="fas fa-trash"></i>
+                            <i class="fas fa-trash"></i>
                         </span>
                         <span class="text">Descartar</span>
                     </a>
-                    <a href="#" class="btn btn-warning btn-icon-split">
+                    <a href="#" class="btn btn-secondary btn-icon-split">
                         <span class="icon text-white-50">
-                          <i class="fas fa-exclamation-triangle"></i>
+                            <i class="fas fa-arrow-right"></i>
                         </span>
                         <span class="text">Guardar como borrador</span>
                     </a>
                     <a href="#" class="btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
-                            <i class="fas fa-check"></i>
+                              <i class="fas fa-check"></i>
                         </span>
-                        <span class="text">Guardar</span>
+                        <span class="text">Publicar</span>
                     </a>
                 </div>
 
