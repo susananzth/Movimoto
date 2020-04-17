@@ -1,5 +1,7 @@
 @extends('layouts.seller-admin')
 
+@section('title', 'Nuevo artículo | Movimoto')
+
 @section('js')
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js'></script>
