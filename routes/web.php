@@ -54,6 +54,10 @@ Route::get('/tienda', 'StoreController@showStore');
 Route::get('/nuevo-articulo', 'StoreController@newItem');
 Route::get('/articulo', 'StoreController@showItem');
 
+// Ruta de nuevo ticket de soporte...
+Route::get('/enviar-ticket', function () {return view('tickets.ticket');});
+
+
 Route::get('profile', function () {
     // Only verified users may enter...
 })->middleware('verified');
