@@ -55,7 +55,7 @@ Route::get('/nuevo-articulo', 'StoreController@newItem');
 Route::get('/articulo', 'StoreController@showItem');
 
 // Ruta de nuevo ticket de soporte...
-Route::get('/enviar-ticket', function () {return view('tickets.ticket');});
+Route::get('/enviar-ticket', 'TicketsController@create');
 
 
 Route::get('profile', function () {
