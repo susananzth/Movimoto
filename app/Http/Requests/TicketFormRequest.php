@@ -13,7 +13,7 @@ class TicketFormRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,8 +25,8 @@ class TicketFormRequest extends FormRequest
     {
         return [
             // Indicamos reglas para el envío del ticket
-            'title'=> 'require|min:3',
-            'content'=> 'require|min:10',
+            'title'=> 'required|min:3',
+            'content'=> 'required|min:10',
         ];
     }
 }

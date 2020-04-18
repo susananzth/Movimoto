@@ -1,3 +1,5 @@
+
+
 @extends('layouts.seller-admin')
 
 @section('title', 'Nuevo artículo | Movimoto')
@@ -16,25 +18,28 @@
                <h4 class="m-0 font-weight-bold text-primary">Enviar un Ticket de soporte</h4>
             </div>
             <div class="card-body">
-                <form class="row" method="POST" action="{{ url('enviar-ticket') }}">
-                  @if (session('status'))
-                      <div class="alert alert-success alert-icon" role="alert">
+                <form class="row" method="post">
+
+
+                  <!-- Un while para mostrar mensajes de error -->
+                  @foreach ($errors->all() as $error)
+                      <div class="alert alert-danger alert-icon" role="alert">
                           <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">×</span>
                           </button>
                           <div class="alert-icon-aside">
-                              <i class="fas fa-check"></i>
+                              <i class="fas fa-exclamation-triangle"></i>
                           </div>
                           <div class="alert-icon-content">
-                              <h6 class="alert-heading">{{ session('status') }}</h6>
+                              <h6 class="alert-heading">{{ $error }}</h6>
                           </div>
                       </div>
-                  @endif
+                  @endforeach
+                  @csrf
 
-                  @csrf   <!-- Solicitud de token para enviar el form -->
                     <div class="form-group col-sm-12">
-                        <label for="title">Título o asunto</label>
-                        <input class="form-control @error('title') is-invalid @enderror" id="title" type="text" name="title">
+                        <label for="ticketTitle">Título o asunto</label>
+                        <input class="form-control @error('title') is-invalid @enderror" id="ticketTitle" type="text" name="title">
                         @error('title')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
@@ -42,8 +47,8 @@
                         @enderror
                     </div>
                     <div class="form-group col-sm-12">
-                        <label for="content">Descripción o contenido</label>
-                        <textarea class="form-control @error('content') is-invalid @enderror" id="content" rows="5" name="content"></textarea>
+                        <label for="ticketDescript">Descripción o contenido</label>
+                        <textarea class="form-control @error('content') is-invalid @enderror" id="ticketDescript" rows="5" name="content"></textarea>
                         @error('content')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>

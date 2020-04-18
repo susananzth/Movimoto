@@ -22,6 +22,50 @@
 .btn-primary.focus, .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgba(177, 214, 182, 0.53);
 }
+.alert-icon {
+    position: relative;
+    display: -webkit-box;
+    display: flex;
+    padding: 0;
+    width: 100%;
+}
+.alert-icon button.close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.25rem;
+}
+.alert-heading{
+    font-weight: 600;
+    margin-bottom: 0;
+    margin-top: .5rem;
+}
+.alert-icon .alert-icon-aside {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.25rem;
+    font-size: 1.5rem;
+}
+.alert-icon .alert-icon-content {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+.close {
+    float: right;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: 0.5;
+}
 /* END FORM */
 .lift {
     box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 45, 65, 0.15);

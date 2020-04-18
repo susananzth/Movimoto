@@ -1,8 +1,9 @@
 <?php
-
+use App\Ticket;
 use Illuminate\Routing\Router;
 use App\Mail\MailtrapExample;
 use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Request;
 
 // Ruta de inicio...
 Route::get('/', function () {return view('index');});
@@ -54,8 +55,9 @@ Route::get('/tienda', 'StoreController@showStore');
 Route::get('/nuevo-articulo', 'StoreController@newItem');
 Route::get('/articulo', 'StoreController@showItem');
 
-// Ruta de nuevo ticket de soporte...
-Route::get('/enviar-ticket', 'TicketsController@create');
+// Rutas de ticket de soporte...
+Route::get('nuevo-ticket', 'TicketsController@create');
+Route::post('enviar-ticket', 'TicketsController@store');
 
 
 Route::get('profile', function () {

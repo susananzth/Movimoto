@@ -16,7 +16,8 @@
                <h4 class="m-0 font-weight-bold text-primary">Añadir un nuevo artículo</h4>
             </div>
             <div class="card-body">
-                <form class="row">
+                <form class="row" method="post">
+                  @csrf
                     <div class="form-group col-sm-12">
                         <label for="itemTitle">Título del artículo</label>
                         <input class="form-control" id="itemTitle" type="text" placeholder="Ej: Motor">
@@ -119,24 +120,24 @@
                 </script>
                 <div class="my-2"></div>
                 <div class="ml-auto text-right">
-                    <a href="#" class="btn btn-danger btn-icon-split">
+                    <button type="submit" class="btn btn-danger btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-trash"></i>
                         </span>
                         <span class="text">Descartar</span>
-                    </a>
-                    <a href="#" class="btn btn-secondary btn-icon-split">
+                    </button>
+                    <button type="submit" class="btn btn-secondary btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-arrow-right"></i>
                         </span>
                         <span class="text">Guardar como borrador</span>
-                    </a>
-                    <a href="#" class="btn btn-success btn-icon-split">
+                    </button>
+                    <button type="submit" class="btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
                               <i class="fas fa-check"></i>
                         </span>
                         <span class="text">Publicar</span>
-                    </a>
+                    </button>
                 </div>
 
             </div>

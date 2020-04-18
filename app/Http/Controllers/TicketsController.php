@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Request;
 
+use App\Http\Requests\TicketFormRequest; // Llamada al request del ticket form
+use App\Ticket; // Llamada al modelo Ticket
 class TicketsController extends Controller
 {
     /**
@@ -11,6 +14,12 @@ class TicketsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     public function __construct()
+     {
+         $this->middleware('auth');
+     }
+
     public function index()
     {
         //
@@ -34,9 +43,23 @@ class TicketsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+     public function store(TicketFormRequest $request)
+     {
+         $validated = $request->validated();
+         /* $validatedData = $request->validate([
+           'de titulo'=> 'required|min:3',
+           'de contenido'=> 'required|min:10',
+         ]); */
+
+          $slug = uniqid(); // Generamos una ID única y se guarda en la variable
+          Ticket::create([
+            'title' => Request::input('title'),
+            'content' => Request::input('title'),
+            'slug' => $slug, // Inserto el contenido de la variable en el campo
+            'created_at' => now(),
+            'updated_at' => now(),
+          ]);
+          return redirect('nuevo-ticket')->with('status', 'Su ticket ha sido creado. Su ID único es: '.$slug);
     }
 
     /**
