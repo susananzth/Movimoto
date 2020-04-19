@@ -17,6 +17,16 @@
     text-decoration: none;
 }
 
+.table tbody tr:hover {
+    color: #687281;
+    background-color: rgba(227, 230, 236, 0.25);
+}
+.custom-select {
+  background: url(../vendor/fontawesome-free/svgs/regular/chevron-down-solid.svg) no-repeat right .75rem center/8px 10px;
+}
+.display-in-block{
+  display: inline-block;
+}
 /* FORM  */
 .form-control:focus {
     border-color: #a7efb0;

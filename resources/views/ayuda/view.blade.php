@@ -62,6 +62,7 @@
                                       <th>ID</th>
                                       <th>Título</th>
                                       <th>Estado</th>
+                                      <th>Acción</th>
                                     </tr>
                                   </thead>
 
@@ -70,6 +71,7 @@
                                       <th>ID</th>
                                       <th>Título</th>
                                       <th>Estado</th>
+                                      <th>Acción</th>
                                     </tr>
                                   </tfoot>
 
@@ -78,7 +80,17 @@
                                         <tr>
                                           <td>{!! $ticket->slug !!}</td>
                                           <td>{!! $ticket->title !!}</td>
-                                          <td>{!! $ticket->status ? 'Pendiente' : 'Resuelto' !!}</td>
+                                          <td>{!! $ticket->status ? '<div class="badge badge-warning badge-pill">Pendiente</div>' : '<div class="badge badge-success badge-pill">Resuelto</div>' !!}</td>
+                                          <th>
+                                              <div class="display-in-block">
+                                                  <a href="{!! action('TicketsController@show', $ticket->slug) !!}" class="btn btn-primary btn-icon-split">
+                                                      <span class="icon text-white-50">
+                                                            <i class="far fa-eye"></i>
+                                                      </span>
+                                                      <span class="text">Ver</span>
+                                                  </a>
+                                              </div>
+                                          </th>
                                         </tr>
                                       @endforeach
                                   </tbody>
