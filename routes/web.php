@@ -56,7 +56,8 @@ Route::get('/nuevo-articulo', 'StoreController@newItem');
 Route::get('/articulo', 'StoreController@showItem');
 
 // Rutas de ticket de soporte...
-Route::get('ver-ticket', 'TicketsController@index');
+Route::get('ayuda', 'TicketsController@index');
+Route::get('ver-tickets', 'TicketsController@view');
 Route::get('nuevo-ticket', 'TicketsController@create');
 Route::post('enviar-ticket', 'TicketsController@store');
 

@@ -4,8 +4,17 @@
 *{
   font-family: 'Quicksand', sans-serif;
 }
+.rem6{
+  font-size: 6rem;
+}
 .text-primary {
     color: #44864d!important;
+}
+.text-decoration-none {
+    text-decoration: none;
+}
+.text-decoration-none:hover {
+    text-decoration: none;
 }
 
 /* FORM  */

@@ -108,7 +108,7 @@
 
       <!-- Menú de ayuda -->
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/oficina') }}">
+        <a class="nav-link" href="{{ url('/ayuda') }}">
           <i class="fas fa-fw fa-life-ring"></i>
           <span>Ayuda</span></a>
       </li>

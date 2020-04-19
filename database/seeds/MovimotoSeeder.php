@@ -14,13 +14,38 @@ class MovimotoSeeder extends Seeder
       /*  Seeder para llenar los campos que necesita el sistema de primera mano
          para el correcto funcionamiento. Para ejecutarlo en un proyecto recien descargado
          Y ANTES DE TENER ALGUN REGISTRO VALIOSO EN LA BD, se ejecuta los comandos:
-          php artisan migrate  +   php artisan seed   =>  primero la migración para crear las tablas, luego el seeder para llenarlas.
+          php artisan migrate  +   php artisan seed   =>  primero la migración para crear las tablas,
+          luego el seeder para llenarlas.
             or
-          php artisan migrate:fresh --seed   => Esto es cuando ya estaban las tablas creadas con algunos registros de prueba basura.
-
+          php artisan migrate:fresh --seed   => Esto es cuando ya estaban las tablas creadas con algunos
+          registros de prueba basura.
        */
      public function run()
      {
+         // Añadir registros en tabla de tipo de usuarios
+         TypeUser::create([
+           'name' => 'Admin',
+           'created_at' => now(),
+           'updated_at' => now(),
+           'modified_by' => '1',
+           'status' => 'true',
+         ]);
+         TypeUser::create([
+           'name' => 'Cliente',
+           'created_at' => now(),
+           'updated_at' => now(),
+           'modified_by' => '1',
+           'status' => 'true',
+         ]);
+         TypeUser::create([
+           'name' => 'Empresa',
+           'created_at' => now(),
+           'updated_at' => now(),
+           'modified_by' => '1',
+           'status' => 'true',
+         ]);
+
+         /* Añadir registros en tabla de tickets
          // Con esto inserto un registro dentro de la BD tickets
          $slug = uniqid(); // Obtengo el código de ticket y lo guardo en la variable
          Ticket::create([
@@ -29,6 +54,6 @@ class MovimotoSeeder extends Seeder
            'slug' => $slug, // Inserto el contenido de la variable en el campo
            'created_at' => now(),
            'updated_at' => now(),
-         ]);
+         ]);  */
      }
 }
