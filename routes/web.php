@@ -55,12 +55,12 @@ Route::get('/tienda', 'StoreController@showStore');
 Route::get('/nuevo-articulo', 'StoreController@newItem');
 Route::get('/articulo', 'StoreController@showItem');
 
-// Rutas de ticket de soporte...
+// Rutas de tAyuda y Soporte...
 Route::get('ayuda', 'TicketsController@index');
 Route::get('ver-tickets', 'TicketsController@view');
+Route::get('ver-ticket/{slug?}', 'TicketsController@show');
 Route::get('nuevo-ticket', 'TicketsController@create');
 Route::post('enviar-ticket', 'TicketsController@store');
-
 
 Route::get('profile', function () {
     // Only verified users may enter...

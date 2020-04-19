@@ -74,9 +74,12 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($slug) // Parametro el ID del ticket
     {
-        //
+        // Busco por ID de ticket y aplico el metodo de mostrar el primero encontrado sino que falle
+        $ticket = Ticket::whereSlug($slug)->firstOrFail();
+        // Devuelvo la vista mostrar con ese ticket o el fallo
+        return view('ayuda.show', compact('ticket'));
     }
 
     /**
