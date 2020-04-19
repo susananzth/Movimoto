@@ -22,7 +22,8 @@ class TicketsController extends Controller
 
     public function index()
     {
-        //
+        $tickets = Ticket::all(); // Traigo todos los tickets de la BD y los guardo en la variable
+        return view('tickets.index', campact('tickets')); //Devolvemos la vista con el array que trae los tickets
     }
 
     /**
@@ -33,7 +34,7 @@ class TicketsController extends Controller
     public function create()
     {
         // Muestra la vista para crear un ticket
-        return view('tickets.ticket');
+        return view('tickets.create');
 
     }
 
