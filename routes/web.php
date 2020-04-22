@@ -55,14 +55,16 @@ Route::get('/tienda', 'StoreController@showStore');
 Route::get('/nuevo-articulo', 'StoreController@newItem');
 Route::get('/articulo', 'StoreController@showItem');
 
-// Rutas de tAyuda y Soporte...
-Route::get('ayuda', 'TicketsController@index');
-Route::get('ver-tickets', 'TicketsController@view');
-Route::get('ver-ticket/{slug?}', 'TicketsController@show');
-Route::get('nuevo-ticket', 'TicketsController@create');
-Route::get('editar-ticket/{slug?}', 'TicketsController@edit');
-Route::put('editar-ticket/{slug?}', 'TicketsController@update');
-Route::post('enviar-ticket', 'TicketsController@store');
+// INICIO Rutas de Ayuda y Soporte...
+Route::get('ayuda', 'TicketsController@index'); // Ver menú de ayuda
+Route::get('ver-tickets', 'TicketsController@view'); // Ver lista de tickets
+Route::get('ver-ticket/{slug?}', 'TicketsController@show'); // Ver 1 ticket
+Route::get('nuevo-ticket', 'TicketsController@create'); // Crear un ticket
+Route::get('editar-ticket/{slug?}', 'TicketsController@edit'); // Abrir form para editar 1 tickets
+Route::put('editar-ticket/{slug?}', 'TicketsController@update'); // Enviar cambios de editar 1 tickets
+Route::post('enviar-ticket', 'TicketsController@store'); // Enviar creación de 1 ticket
+// FIN Rutas de Ayuda y Soporte...
+
 
 Route::get('profile', function () {
     // Only verified users may enter...

@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 
 use App\Http\Requests\TicketFormRequest; // Llamada al request del ticket form
-use Request;
+use Illuminate\Http\Request;
 use App\Ticket; // Llamada al modelo Ticket
 class TicketsController extends Controller
 {
@@ -100,23 +100,19 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Ticket $ticket, Request $request) // Parametros: Request del ticket, el ID del ticket    -   update(Ticket $ticket, Request $request)
+    public function update(Request $request, $slug) // Parametros: Request del ticket, el ID del ticket
     {
+      // Validación de lo que edito del ticket
+      $this->validate($request, [
+        'content' => 'required',
+      ]);
 
-        // Busco por ID de ticket y aplico el metodo de mostrar el primero encontrado sino que falle
-       //  $ticket = Ticket::whereSlug($slug)->firstOrFail();
-
-       $data = $request->validated([
-         'content' => 'required',
-       ]);
-
-       $ticket->update([
-            'content' => $request->input('content'),
-        ]);
-
-       $ticket->update($data);
-
-       return redirect(action('TicketsController@edit', $ticket->slug))->with('status', 'El ticket: '.$slug.' ha sido actualizado');
+      // Del modelo de ticket, actualizao los datos del ID o falle
+      $ticket = Ticket::where('slug', $slug)->firstOrFail();
+      $ticket->content = $request->content;
+      $ticket->save(); // Guardo cambios
+      // Redirecciono a la vista de editar ticket con un mensaje de success
+      return redirect(action('TicketsController@update', $ticket->slug))->with('status', 'El ticket: '.$slug.' ha sido actualizado');
     }
 
     /**

@@ -45,13 +45,13 @@
                         @enderror
                     </div>
                     <label for="status">Estado del ticket</label>
-
+  <!--
                     <select class="form-control width-auto" id="status" name="status">
-                      <!-- {{ $ticket->status == 0 ? 'active' : '' }} -->
+                     {{ $ticket->status == 0 ? 'active' : '' }}
 
                         <option value="0" class="" >Pendiente</option>
                         <option value="1">Completado</option>
-                    </select>
+                    </select>-->
                     <div class="my-2"></div>
                     <div class="ml-auto ">
                         <a href="#" class="btn btn-secondary btn-icon-split text-left">
