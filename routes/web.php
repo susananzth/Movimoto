@@ -60,6 +60,8 @@ Route::get('ayuda', 'TicketsController@index');
 Route::get('ver-tickets', 'TicketsController@view');
 Route::get('ver-ticket/{slug?}', 'TicketsController@show');
 Route::get('nuevo-ticket', 'TicketsController@create');
+Route::get('editar-ticket/{slug?}', 'TicketsController@edit');
+Route::put('editar-ticket/{slug?}', 'TicketsController@update');
 Route::post('enviar-ticket', 'TicketsController@store');
 
 Route::get('profile', function () {

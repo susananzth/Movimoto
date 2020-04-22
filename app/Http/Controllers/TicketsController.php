@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Request;
 
 use App\Http\Requests\TicketFormRequest; // Llamada al request del ticket form
+use Request;
 use App\Ticket; // Llamada al modelo Ticket
 class TicketsController extends Controller
 {
@@ -52,10 +52,6 @@ class TicketsController extends Controller
      public function store(TicketFormRequest $request)
      {
          $validated = $request->validated();
-         /* $validatedData = $request->validate([
-           'de titulo'=> 'required|min:3',
-           'de contenido'=> 'required|min:10',
-         ]); */
 
           $slug = uniqid(); // Generamos una ID única y se guarda en la variable
           Ticket::create([
@@ -77,7 +73,7 @@ class TicketsController extends Controller
     public function show($slug) // Parametro el ID del ticket
     {
         // Busco por ID de ticket y aplico el metodo de mostrar el primero encontrado sino que falle
-        $ticket = Ticket::whereSlug($slug)->firstOrFail();
+        $ticket = Ticket::where('slug', $slug)->firstOrFail();
         // Devuelvo la vista mostrar con ese ticket o el fallo
         return view('ayuda.show', compact('ticket'));
     }
@@ -88,9 +84,13 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($slug) // Parametro el ID del ticket
     {
-        //
+      // Busco por ID de ticket y aplico el metodo de mostrar el primero encontrado sino que falle
+      $ticket = Ticket::where('slug', $slug)->firstOrFail(); // Otra forma es: $ticket = Ticket::find($slug);
+
+      // Devuelvo la vista mostrar con ese ticket o el fallo
+      return view('ayuda.edit', compact('ticket'));
     }
 
     /**
@@ -100,9 +100,23 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Ticket $ticket, Request $request) // Parametros: Request del ticket, el ID del ticket    -   update(Ticket $ticket, Request $request)
     {
-        //
+
+        // Busco por ID de ticket y aplico el metodo de mostrar el primero encontrado sino que falle
+       //  $ticket = Ticket::whereSlug($slug)->firstOrFail();
+
+       $data = $request->validated([
+         'content' => 'required',
+       ]);
+
+       $ticket->update([
+            'content' => $request->input('content'),
+        ]);
+
+       $ticket->update($data);
+
+       return redirect(action('TicketsController@edit', $ticket->slug))->with('status', 'El ticket: '.$slug.' ha sido actualizado');
     }
 
     /**

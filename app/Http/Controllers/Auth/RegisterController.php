@@ -51,16 +51,16 @@ class RegisterController extends Controller
     {
         return Validator::make($data, [
             'type_user_id' => ['required', 'integer'],
-            'dni' => ['required', 'integer', 'min:8', 'unique:users'],
+            'dni' => ['required', 'integer', 'between:7,9', 'unique:users'],
             'name' => ['required', 'string', 'max:255', 'unique:users'],
             'firstname' => ['required', 'string', 'max:255'],
             'lastname' => ['required', 'string', 'max:255'],
             'codeCountry' => ['required', 'string', 'max:5'],
-            'phone' => ['required', 'integer', 'min:9'],
+            'phone' => ['required', 'integer', 'between:8,10'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:6', 'confirmed'],
+            'password' => ['required', 'string', 'between:5,16', 'confirmed'],
             'distrit' => ['required', 'integer'],
-            'address' => ['required', 'string', 'max:255'],
+            'address' => ['required', 'string', 'between:9,255'],
         ]);
     }
 

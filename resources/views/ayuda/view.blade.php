@@ -1,6 +1,6 @@
 @extends('layouts.seller-admin')
 
-@section('title', 'Ver tickets | Movimoto')
+@section('title', 'Listado de tickets | Movimoto')
 
 @section('js')
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -52,9 +52,6 @@
                       </div>
                       <div class="row">
                           <div class="col-sm-12">
-                              @if ($tickets->isEmpty())
-                                <p>No hay tickets</p>
-                              @else
                               <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
 
                                   <thead>
@@ -76,27 +73,30 @@
                                   </tfoot>
 
                                   <tbody>
-                                      @foreach($tickets as $ticket)
+                                      @forelse($tickets as $ticket)
                                         <tr>
-                                          <td>{!! $ticket->slug !!}</td>
-                                          <td>{!! $ticket->title !!}</td>
+                                          <td>{{ $ticket->slug }}</td>
+                                          <td>{{ $ticket->title }}</td>
+                                          <!-- Pirificar HTML -->
                                           <td>{!! $ticket->status ? '<div class="badge badge-warning badge-pill">Pendiente</div>' : '<div class="badge badge-success badge-pill">Resuelto</div>' !!}</td>
-                                          <th>
+                                          <td>
                                               <div class="display-in-block">
-                                                  <a href="{!! action('TicketsController@show', $ticket->slug) !!}" class="btn btn-primary btn-icon-split">
+                                                  <a href="{{ action('TicketsController@show', $ticket->slug) }}" class="btn btn-primary btn-icon-split">
                                                       <span class="icon text-white-50">
                                                             <i class="far fa-eye"></i>
                                                       </span>
                                                       <span class="text">Ver</span>
                                                   </a>
                                               </div>
-                                          </th>
+                                          </td>
                                         </tr>
-                                      @endforeach
+
+                                      @empty
+                                        <p>No hay tickets</p>
+                                      @endforelse
                                   </tbody>
 
                               </table>
-                              @endif
                           </div>
                       </div>
                   </div>

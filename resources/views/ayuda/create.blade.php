@@ -1,6 +1,6 @@
 @extends('layouts.seller-admin')
 
-@section('title', 'Nuevo artículo | Movimoto')
+@section('title', 'Nuevo ticket | Movimoto')
 
 @section('js')
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>

@@ -1,6 +1,6 @@
 @extends('layouts.seller-admin')
 
-@section('title', 'Ayuda | Movimoto')
+@section('title', 'Ver ticket | Movimoto')
 
 @section('js')
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -15,14 +15,14 @@
           <div class="container">
               <div class="card shadow">
                   <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                     <h4 class="m-0 font-weight-bold text-primary">Ticket # {!! $ticket->slug !!}</h4>
+                     <h4 class="m-0 font-weight-bold text-primary">Ticket # {{ $ticket->slug }}</h4>
                   </div>
                   <div class="card-body">
-                      <h6><strong>Titulo:</strong> {!! $ticket->title !!}</h6>
-                      <p><strong>Estado:</strong> {!! $ticket->status ? 'Pendiente' : 'Resuelto' !!}</p>
-                      <p><strong>Contenido:</strong> {!! $ticket->content !!}</p>
+                      <h6><strong>Titulo:</strong> {{ $ticket->title }}</h6>
+                      <p><strong>Estado:</strong> {{ $ticket->status ? 'Pendiente' : 'Resuelto' }}</p>
+                      <p><strong>Contenido:</strong> {{ $ticket->content }}</p>
                       <div class="ml-auto text-right">
-                          <a href="#" class="btn btn-primary btn-icon-split">
+                          <a href="{{ action('TicketsController@edit', $ticket->slug) }}" class="btn btn-primary btn-icon-split">
                               <span class="icon text-white-50">
                                     <i class="far fa-edit"></i>
                               </span>
