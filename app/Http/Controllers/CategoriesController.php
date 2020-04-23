@@ -60,11 +60,6 @@ class CategoriesController extends Controller
         $category->updated_at = now();
         $category->save(); // Guardo cambios
 
-         /*Category::create([
-           'name' => Request::input('name'),
-           'created_at' => now(),
-           'updated_at' => now(),
-         ]);*/
          return redirect('nueva-categoria')->with('status', 'Su categoría ha sido creada exitosamente.');
     }
 

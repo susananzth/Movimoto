@@ -52,17 +52,27 @@ Route::get('/send-mail', function () {
 Route::get('/tienda', 'StoreController@showStore');
 
 // INICIO Rutas de categorías....
-Route::get('categorias', 'CategoriesController@index'); // Ver menú de categorías        VV
-Route::get('ver-categorias', 'CategoriesController@view'); // Ver lista de categorías    VV
-Route::get('ver-categoria/{id?}', 'CategoriesController@show'); // Ver 1 categoría      VV
-Route::get('nueva-categoria', 'CategoriesController@create'); // Crear un ticket
-Route::get('editar-categoria/{id?}', 'CategoriesController@edit'); // Abrir form para editar 1 categoría     VV
-Route::put('editar-categoria/{id?}', 'CategoriesController@update'); // Enviar cambios de editar 1 categoría     VV
-Route::post('enviar-categoria', 'CategoriesController@store'); // Enviar creación de 1 ticket
+Route::get('categorias', 'CategoriesController@index'); // Ver menú de categorías
+Route::get('ver-categorias', 'CategoriesController@view'); // Ver lista de categorías
+Route::get('ver-categoria/{id?}', 'CategoriesController@show'); // Ver 1 categoría
+Route::get('nueva-categoria', 'CategoriesController@create'); // Crear 1 categoría
+Route::get('editar-categoria/{id?}', 'CategoriesController@edit'); // Abrir form para editar 1 categoría
+Route::put('editar-categoria/{id?}', 'CategoriesController@update'); // Enviar cambios de editar 1 categoría
+Route::post('enviar-categoria', 'CategoriesController@store'); // Enviar creación de 1 categoría
 // FIN Rutas de categorías....
 
+// INICIO Rutas de los ARTÍCULOS....
+Route::get('articulos', 'ItemsController@index'); // Ver menú de artículos
+Route::get('ver-articulos', 'ItemsController@view'); // Ver lista de artículos
+Route::get('ver-articulo/{id?}', 'ItemsController@show'); // Ver 1 artículo
+Route::get('nuevo-articulo', 'ItemsController@create'); // Crear 1 artículo
+Route::get('editar-articulo/{id?}', 'ItemsController@edit'); // Abrir form para editar 1 artículo
+Route::put('editar-articulo/{id?}', 'ItemsController@update'); // Enviar cambios de editar 1 artículo
+Route::post('enviar-articulo', 'ItemsController@store'); // Enviar creación de 1 artículo
+// FIN Rutas de los ARTÍCULOS....
+
 //Rutas de productos...
-Route::get('/nuevo-articulo', 'StoreController@newItem');
+
 Route::get('/articulo', 'StoreController@showItem');
 
 // INICIO Rutas de Ayuda y Soporte...

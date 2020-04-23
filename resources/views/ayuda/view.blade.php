@@ -2,12 +2,8 @@
 
 @section('title', 'Listado de tickets | Movimoto')
 
-@section('js')
+@section('css')
 <!-- Estilos de esta vista -->
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-beta1/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/tinymce/4.3.4/tinymce.min.js'></script>
 <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 @endsection
 

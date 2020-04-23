@@ -10,16 +10,15 @@
 @section('content')
       <div class="container-fluid">
           <!-- Cabecera de página -->
-          <h1 class="h3 mb-2 text-gray-800">Listado de categorías de productos</h1>
-          <p class="mb-4">En esta sección se agregan las categorías que estarán disponibles
-            para que los comenciantes puedan clasificar sus productos y servicios.</p>
+          <h1 class="h3 mb-2 text-gray-800">Listado de artículos</h1>
+          <p class="mb-4">En esta sección se listan los artículos registrados por los usuarios.</p>
           </a><a target="_blank" href="#">Link a tutoriales y/o procesos</a></p>
 
-          <!-- Tabla de Categorías -->
+          <!-- Tabla de Artículos -->
           <div class="card shadow mb-4">
 
               <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Categorías</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Artículos</h6>
               </div>
 
               <div class="card-body">
@@ -36,7 +35,7 @@
                                             <option value="25">25</option>
                                             <option value="50">50</option>
                                             <option value="100">100</option>
-                                      </select> categorías
+                                      </select> artículos
                                   </label>
                               </div>
                           </div>
@@ -70,16 +69,16 @@
                                       </tr>
                                   </tfoot>
                                   <tbody> <!-- Registros de la tabla -->
-                                      @forelse($categories as $category) <!-- Buble 'por cada' para mostrar todos los registros -->
+                                      @forelse($items as $item) <!-- Buble 'por cada' para mostrar todos los registros -->
                                         <tr>
-                                          <td>{{ $category->name }}</td>
-                                          <td>{{ $category->created_at }}</td>
-                                          <td>{{ $category->modified_by }}</td>
+                                          <td>{{ $item->name }}</td>
+                                          <td>{{ $item->created_at }}</td>
+                                          <td>{{ $item->modified_by }}</td>
                                           <!-- Purificar HTML -->
-                                          <td>{!! $category->status ? '<div class="badge badge-success badge-pill">Activo</div>' : '<div class="badge badge-danger badge-pill">Inactivo</div>' !!}</td>
+                                          <td>{!! $item->status ? '<div class="badge badge-success badge-pill">Activo</div>' : '<div class="badge badge-danger badge-pill">Inactivo</div>' !!}</td>
                                           <td>
                                               <div class="display-in-block">
-                                                  <a href="{{ action('CategoriesController@show', $category->id) }}" class="btn btn-primary btn-icon-split">
+                                                  <a href="{{ action('ItemsController@show', $item->id) }}" class="btn btn-primary btn-icon-split">
                                                       <span class="icon text-white-50">
                                                             <i class="far fa-eye"></i>
                                                       </span>
@@ -89,7 +88,7 @@
                                           </td>
                                         </tr>
                                         @empty <!-- Si no hay registros, mostrará el siguiente mensaje -->
-                                          <p>No hay categorías</p>
+                                          <p><b>No hay artículos</b></p>
                                         @endforelse
                                   </tbody>
                               </table>

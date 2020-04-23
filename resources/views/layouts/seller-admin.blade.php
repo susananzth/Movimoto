@@ -12,16 +12,15 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
   <title>@yield('title')</title>
-  <!-- Scripts
-  <script src="{{ asset('js/app.js') }}" defer></script> -->
 
   <!-- Fuentes -->
   <link href="{{ asset('vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
   <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
   <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
-  <!-- Estilos -->
+  <!-- Estilos personalizados -->
   @yield('css')
+  <!-- JavaScript personalizados -->
   @yield('js')
 
 
@@ -77,11 +76,11 @@
           <span>Ordenes</span></a>
       </li>
 
-      <!-- Menú del Productos -->
+      <!-- Menú de los artículos -->
       <li class="nav-item">
-        <a class="nav-link" href="{{ url('/nuevo-articulo') }}">
+        <a class="nav-link" href="{{ url('/articulos') }}">
           <i class="fas fa-fw fa-cash-register"></i>
-          <span>Productos</span></a>
+          <span>Artículos</span></a>
       </li>
 
       <!-- Menú del Categorías -->
