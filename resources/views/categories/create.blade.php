@@ -1,16 +1,16 @@
 @extends('layouts.seller-admin')
 
-@section('title', 'Nuevo ticket | Movimoto')
+@section('title', 'Nueva categoría | Movimoto')
 
 @section('content')
     <div class="container">
         <div class="card shadow">
             <div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-               <h4 class="m-0 font-weight-bold text-primary">Enviar un Ticket de soporte</h4>
+               <h4 class="m-0 font-weight-bold text-primary">Agregar una categoría</h4>
             </div>
             <div class="card-body">
-                <form class="row" method="POST" action="{{ url('enviar-ticket') }}">
-                  @if (session('status')) <!-- Si el ticket se creo correctamente, mostrará el mensaje del controlador -->
+                <form class="row" method="POST" action="{{ url('enviar-categoria') }}">
+                  @if (session('status')) <!-- Si la categoría se creo correctamente, mostrará el mensaje del controlador -->
                       <div class="alert alert-success alert-icon" role="alert">
                           <button class="close" type="button" data-dismiss="alert" aria-label="Close">
                               <span aria-hidden="true">×</span>
@@ -25,18 +25,9 @@
                   @endif
                   @csrf   <!-- Solicitud de token para enviar el form -->
                     <div class="form-group col-sm-12">
-                        <label for="title">Título o asunto</label>
-                        <input class="form-control @error('title') is-invalid @enderror" id="title" type="text" name="title">
-                        @error('title')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-                    </div>
-                    <div class="form-group col-sm-12">
-                        <label for="content">Descripción o contenido</label>
-                        <textarea class="form-control @error('content') is-invalid @enderror" id="content" rows="5" name="content"></textarea>
-                        @error('content')
+                        <label for="title">Nombre de la categoría:</label>
+                        <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name">
+                        @error('name')
                             <span class="invalid-feedback" role="alert">
                                 <strong>{{ $message }}</strong>
                             </span>
@@ -48,7 +39,7 @@
                             <span class="icon text-white-50">
                                   <i class="fas fa-check"></i>
                             </span>
-                            <span class="text">Enviar</span>
+                            <span class="text">Agregar</span>
                         </button>
                     </div>
                 </form>

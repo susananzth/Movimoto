@@ -77,11 +77,18 @@
           <span>Ordenes</span></a>
       </li>
 
-      <!-- Menú del carrito -->
+      <!-- Menú del Productos -->
       <li class="nav-item">
         <a class="nav-link" href="{{ url('/nuevo-articulo') }}">
           <i class="fas fa-fw fa-cash-register"></i>
           <span>Productos</span></a>
+      </li>
+
+      <!-- Menú del Categorías -->
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('/categorias') }}">
+          <i class="fas fa-fw fa-clipboard-list"></i>
+          <span>Categorías</span></a>
       </li>
 
       <!-- Menú de la red -->

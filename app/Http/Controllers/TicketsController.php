@@ -17,7 +17,7 @@ class TicketsController extends Controller
 
      public function __construct()
      {
-         $this->middleware('auth');
+         $this->middleware('auth'); // Para indicar que todas las vistas de este controlador, requieren autenticación
      }
 
     public function index()
@@ -87,7 +87,7 @@ class TicketsController extends Controller
     public function edit($slug) // Parametro el ID del ticket
     {
       // Busco por ID de ticket y aplico el metodo de mostrar el primero encontrado sino que falle
-      $ticket = Ticket::where('slug', $slug)->firstOrFail(); // Otra forma es: $ticket = Ticket::find($slug);
+      $ticket = Ticket::where('slug', $slug)->firstOrFail();
 
       // Devuelvo la vista mostrar con ese ticket o el fallo
       return view('ayuda.edit', compact('ticket'));

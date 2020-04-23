@@ -51,6 +51,16 @@ Route::get('/send-mail', function () {
 //Rutas de la tienda...
 Route::get('/tienda', 'StoreController@showStore');
 
+// INICIO Rutas de categorías....
+Route::get('categorias', 'CategoriesController@index'); // Ver menú de categorías        VV
+Route::get('ver-categorias', 'CategoriesController@view'); // Ver lista de categorías    VV
+Route::get('ver-categoria/{id?}', 'CategoriesController@show'); // Ver 1 categoría      VV
+Route::get('nueva-categoria', 'CategoriesController@create'); // Crear un ticket
+Route::get('editar-categoria/{id?}', 'CategoriesController@edit'); // Abrir form para editar 1 categoría     VV
+Route::put('editar-categoria/{id?}', 'CategoriesController@update'); // Enviar cambios de editar 1 categoría     VV
+Route::post('enviar-categoria', 'CategoriesController@store'); // Enviar creación de 1 ticket
+// FIN Rutas de categorías....
+
 //Rutas de productos...
 Route::get('/nuevo-articulo', 'StoreController@newItem');
 Route::get('/articulo', 'StoreController@showItem');
