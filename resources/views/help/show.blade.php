@@ -10,7 +10,7 @@
                   </div>
                   <div class="card-body">
                       <p><strong>Titulo:</strong> {{ $ticket->title }}</p>
-                      <p><strong>Estado:</strong> {{ $ticket->status ? 'Pendiente' : 'Resuelto' }}</p>
+                      <p><strong>Estado:</strong> {{ $ticket->status ?  'Resuelto' : 'Pendiente' }}</p>
                       <p><strong>Contenido:</strong> {{ $ticket->content }}</p>
                       <div class="ml-auto">
                           <a href="{{ url('/ver-tickets') }}" class="btn btn-secondary btn-icon-split text-left">

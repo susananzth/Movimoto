@@ -18,8 +18,11 @@ class CreateTicketsTable extends Migration
             $table->string('title', 255);
             $table->text('content');
             $table->string('slug')->nullable();
-            $table->tinyInteger('status')->default(1);
-            $table->timestamps();
+            $table->timestamp('created_at')->nullable();
+            $table->timestamp('updated_at')->nullable();
+            $table->timestamp('deleted_at')->nullable();
+            $table->integer('modified_by')->nullable()->default('1');
+            $table->boolean('status')->default(false);
         });
     }
 

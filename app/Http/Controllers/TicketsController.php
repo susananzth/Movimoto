@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-
 use App\Http\Requests\TicketFormRequest; // Llamada al request del ticket form
 use Illuminate\Http\Request;
 use App\Ticket; // Llamada al modelo Ticket
@@ -22,13 +21,13 @@ class TicketsController extends Controller
 
     public function index()
     {
-        return view('ayuda.index'); // Muestro vista de menú de tickets
+        return view('help.index'); // Muestro vista de menú de tickets
     }
 
     public function view()
     {
         $tickets = Ticket::all(); // Traigo todos los tickets de la BD y los guardo en la variable
-        return view('ayuda.view', compact('tickets')); //Devolvemos la vista con el array que trae los tickets
+        return view('help.view', compact('tickets')); //Devolvemos la vista con el array que trae los tickets
     }
 
     /**
@@ -39,7 +38,7 @@ class TicketsController extends Controller
     public function create()
     {
         // Muestra la vista para crear un ticket
-        return view('ayuda.create');
+        return view('help.create');
 
     }
 
@@ -75,7 +74,7 @@ class TicketsController extends Controller
         // Busco por ID de ticket y aplico el metodo de mostrar el primero encontrado sino que falle
         $ticket = Ticket::where('slug', $slug)->firstOrFail();
         // Devuelvo la vista mostrar con ese ticket o el fallo
-        return view('ayuda.show', compact('ticket'));
+        return view('help.show', compact('ticket'));
     }
 
     /**
@@ -90,7 +89,7 @@ class TicketsController extends Controller
       $ticket = Ticket::where('slug', $slug)->firstOrFail();
 
       // Devuelvo la vista mostrar con ese ticket o el fallo
-      return view('ayuda.edit', compact('ticket'));
+      return view('help.edit', compact('ticket'));
     }
 
     /**

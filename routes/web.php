@@ -62,7 +62,7 @@ Route::post('enviar-categoria', 'CategoriesController@store'); // Enviar creaci�
 // FIN Rutas de categorías....
 
 // INICIO Rutas de los ARTÍCULOS....
-Route::get('articulos', 'ItemsController@index'); // Ver menú de artículos
+Route::get('articulos', 'ItemsController@index'); // Ver menú de artículos    VV
 Route::get('ver-articulos', 'ItemsController@view'); // Ver lista de artículos
 Route::get('ver-articulo/{id?}', 'ItemsController@show'); // Ver 1 artículo
 Route::get('nuevo-articulo', 'ItemsController@create'); // Crear 1 artículo

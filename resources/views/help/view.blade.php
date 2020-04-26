@@ -71,7 +71,7 @@
                                           <td>{{ $ticket->slug }}</td>
                                           <td>{{ $ticket->title }}</td>
                                           <!-- Purificar HTML -->
-                                          <td>{!! $ticket->status ? '<div class="badge badge-warning badge-pill">Pendiente</div>' : '<div class="badge badge-success badge-pill">Resuelto</div>' !!}</td>
+                                          <td>{!! $ticket->status ? '<div class="badge badge-success badge-pill">Resuelto</div>' : '<div class="badge badge-warning badge-pill">Pendiente</div>' !!}</td>
                                           <td>
                                               <div class="display-in-block">
                                                   <a href="{{ action('TicketsController@show', $ticket->slug) }}" class="btn btn-primary btn-icon-split">

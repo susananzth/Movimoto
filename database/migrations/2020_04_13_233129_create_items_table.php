@@ -17,12 +17,16 @@ class CreateItemsTable extends Migration
           $table->bigIncrements('id');
           $table->bigInteger('category_id')->unsigned();
           $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
-          $table->string('name');
+          $table->string('name', 255);
+          $table->text('content');
+          $table->string('currency');
+          $table->float('price');
+          $table->integer('cant');
           $table->timestamp('created_at')->nullable();
           $table->timestamp('updated_at')->nullable();
           $table->timestamp('deleted_at')->nullable();
           $table->integer('modified_by')->nullable()->default('1');
-          $table->boolean('status'  )->nullable()->default(true);
+          $table->boolean('status')->default(true);
       });
     }
 

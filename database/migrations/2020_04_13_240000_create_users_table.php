@@ -33,7 +33,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('updated_at')->nullable();
             $table->timestamp('deleted_at')->nullable();
             $table->integer('modified_by')->nullable()->default('1');
-            $table->boolean('status'  )->nullable()->default(true);
+            $table->boolean('status')->default(true);
         });
     }
 
