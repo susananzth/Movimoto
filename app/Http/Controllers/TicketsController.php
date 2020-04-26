@@ -53,13 +53,13 @@ class TicketsController extends Controller
          $validated = $request->validated();
 
           $slug = uniqid(); // Generamos una ID única y se guarda en la variable
-          Ticket::create([
-            'title' => Request::input('title'),
-            'content' => Request::input('title'),
-            'slug' => $slug, // Inserto el contenido de la variable en el campo
-            'created_at' => now(),
-            'updated_at' => now(),
-          ]);
+          $ticket = new Ticket;
+          $ticket->title = $request->title;
+          $ticket->content = $request->content;
+          $ticket->slug = $slug;
+          $ticket->status = 0;
+          $ticket->save(); // Guardo cambios
+
           return redirect('nuevo-ticket')->with('status', 'Su ticket ha sido creado. Su ID único es: '.$slug);
     }
 
