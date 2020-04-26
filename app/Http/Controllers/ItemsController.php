@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Requests\ItemRequest; // Llamada al request del ticket form
 use App\Model\Item; // Llamada al modelo Item
+use App\Model\Category; // Llamada al modelo Category
 
 class ItemsController extends Controller
 {
@@ -36,8 +38,9 @@ class ItemsController extends Controller
      */
     public function create()
     {
+      $categories = Category::all();// Trae todas las categorías de la tabla
       // Muestra la vista para crear una artículo
-      return view('items.create');
+      return view('items.create', compact('categories'));
     }
 
     /**
@@ -46,9 +49,21 @@ class ItemsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(ItemRequest $request)
     {
-        //
+       $validated = $request->validated();
+
+        $item = new Item;
+        $item->category_id = $request->category_id;
+        $item->name = $request->name;
+        $item->content = $request->content;
+        $item->currency = $request->currency;
+        $item->price = $request->price;
+        $item->cant = $request->cant;
+        $item->status = 1;
+        $item->save(); // Guardo cambios
+
+        return redirect('nuevo-articulo')->with('status', 'Su artículo ha sido creado.');
     }
 
     /**

@@ -5,6 +5,7 @@ use App\Mail\MailtrapExample;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Request;
 
+
 // Ruta de inicio...
 Route::get('/', function () {return view('index');});
 
@@ -66,9 +67,9 @@ Route::get('articulos', 'ItemsController@index'); // Ver menú de artículos    
 Route::get('ver-articulos', 'ItemsController@view'); // Ver lista de artículos
 Route::get('ver-articulo/{id?}', 'ItemsController@show'); // Ver 1 artículo
 Route::get('nuevo-articulo', 'ItemsController@create'); // Crear 1 artículo
+Route::post('enviar-articulo', 'ItemsController@store'); // Enviar creación de 1 artículo
 Route::get('editar-articulo/{id?}', 'ItemsController@edit'); // Abrir form para editar 1 artículo
 Route::put('editar-articulo/{id?}', 'ItemsController@update'); // Enviar cambios de editar 1 artículo
-Route::post('enviar-articulo', 'ItemsController@store'); // Enviar creación de 1 artículo
 // FIN Rutas de los ARTÍCULOS....
 
 //Rutas de productos...

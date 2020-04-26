@@ -25,7 +25,7 @@
                   @endif
                   @csrf   <!-- Solicitud de token para enviar el form -->
                     <div class="form-group col-sm-12">
-                        <label for="title">Nombre de la categoría:</label>
+                        <label for="name">Nombre de la categoría:</label>
                         <input class="form-control @error('name') is-invalid @enderror" id="name" type="text" name="name">
                         @error('name')
                             <span class="invalid-feedback" role="alert">

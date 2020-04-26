@@ -93,6 +93,14 @@
     text-shadow: 0 1px 0 #fff;
     opacity: 0.5;
 }
+.label{
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+.custom-control {
+    display: inline-block;
+    padding-right: 1rem;
+}
 /* END FORM */
 .lift {
     box-shadow: 0 0.15rem 1.75rem 0 rgba(31, 45, 65, 0.15);
